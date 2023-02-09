@@ -18,11 +18,11 @@ interface PropTypes {
 }
 
 export default class Modal extends Component<PropTypes> {
-    node?: HTMLDivElement | null;
-    wrapper ;
+    node?: any | null;
+    
     constructor(props) {
         super(props);
-        this.wrapper = props.ref;
+        this.node = props.ref;
         
     }
 
@@ -30,14 +30,12 @@ export default class Modal extends Component<PropTypes> {
         const { isDragging, width, height, top, left, isOpen, isMinimised, onRequestRecover, className, onFocus } = this.props;
         if (isOpen) {
             return (
-                <div style={{ display: 'contents'}} ref={this.wrapper}>
+
                     <Fragment>
                         <CSSTransition in={!isMinimised} timeout={300} classNames="minimise" unmountOnExit>
                             <div
                                 onClick={onFocus}
-                                ref={(node) => {
-                                    this.node = node;
-                                }}
+                                ref={this.node}
                                 draggable={isDragging}
                                 className={!className ? "flexible-modal" : "flexible-modal " + className}
                                 style={{ width, height, top, left }}
@@ -51,10 +49,10 @@ export default class Modal extends Component<PropTypes> {
                             </button>
                         )}
                     </Fragment>
-                </div>
+                
             );
         } else {
-            return <div style={{ display: 'contents'}} ref={this.wrapper}></div>;
+            return <div style={{ display: 'contents'}} ref={this.node}></div>;
         }
     }
 }
