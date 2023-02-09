@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './index.css';
-import Modal from './model';
+import Modal from './modal';
 interface PropTypes {
     top?: number;
     left?: number;
@@ -10,6 +10,7 @@ interface PropTypes {
     minHeight?: number;
     isOpen: boolean;
     className?: string;
+    style?: object;
     disableMove?: boolean;
     disableVerticalMove?: boolean;
     disableHorizontalMove?: boolean;

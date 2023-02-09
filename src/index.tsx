@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Resizer from './resize';
-import Modal from './model';
+import Modal from './modal';
 
 interface PropTypes {
 	top?: number;
@@ -13,6 +13,7 @@ interface PropTypes {
 	minHeight?: number;
 	isOpen: boolean;
 	className?: string;
+	style?: object;
 	disableMove?: boolean;
 	disableVerticalMove?: boolean;
 	disableHorizontalMove?: boolean;
@@ -219,18 +220,20 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 	}
 
 	render() {
-		const { isOpen, isMinimised, onRequestClose, onRequestMinimise, onRequestRecover, disableResize, className, onFocus } = this.props;
+		const { isOpen, style, isMinimised, onRequestClose, onRequestMinimise, onRequestRecover, disableResize, className, onFocus } = this.props;
 		return (
-			<div>
+			<div style={style||{}}>
 				{/*this mask is a must*/}
 				{isOpen &&
 					!isMinimised && (
 						<div
+						
 							onClick={onRequestMinimise ? onRequestMinimise : onRequestClose}
 							className="flexible-modal-mask"
 						/>
 					)}
 				<Modal
+				    
 					className={className}
 					onFocus={onFocus}
 					width={this.state.width}

@@ -1,10 +1,10 @@
 {
-  "name": "react-modal-resizable-draggable",
+  "name": "react-modal-resizable-draggable-overlay",
   "version": "0.1.6",
   "description": "This is a modal that support resizalbe and draggable function",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wwan5803/react-modal-resizable-draggable.git"
+    "url": "https://github.com/fez2000/react-modal-resizable-draggable-overlay.git"
   },
   "license": "MIT",
   "main": "build/main.js",
@@ -15,7 +15,6 @@
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0",
     "react-motion": "^0.5.2",
     "react-transition-group": "^4.4.1"
   },
@@ -25,8 +24,8 @@
     "build": "webpack --env=production"
   },
   "author": {
-    "name": "Wesley Wang",
-    "email": "wesleywang5803@gmail.com"
+    "name": "Fezeu Eugene",
+    "email": "eugenefezeu@gmail.com"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
