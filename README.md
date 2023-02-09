@@ -1,4 +1,4 @@
-# react-modal-resizable-draggable
+# react-modal-resizable-draggable-overlay
 
 Accessible modal dialog component for React.JS
 
@@ -29,8 +29,8 @@ Accessible modal dialog component for React.JS
 To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
 
 
-    $ npm install react-modal-resizable-draggable
-    $ yarn add react-modal-resizable-draggable
+    $ npm install react-modal-resizable-draggable-overlay
+    $ yarn add react-modal-resizable-draggable-overlay
 
 
 ## Usage
@@ -101,7 +101,7 @@ Inside an app:
 ```jsx
 import React, {Component} from 'react';
 import './App.css';
-import ReactModal from 'react-modal-resizable-draggable';
+import ReactModal from 'react-modal-resizable-draggable-overlay';
 
 class App extends Component {
 
