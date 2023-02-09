@@ -22,8 +22,8 @@ export default class Modal extends Component<PropTypes> {
     wrapper ;
     constructor(props) {
         super(props);
-        this.wrapper = React.createRef();
-        props.ref(this.wrapper)
+        this.wrapper = props.ref;
+        
     }
 
     render() {

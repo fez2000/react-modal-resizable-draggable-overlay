@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, { Component, useRef, } from 'react';
 import './index.css';
 import Resizer from './resize';
 import Modal from './modal';
@@ -49,6 +49,7 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 	dragArea4?: HTMLDivElement | null;
 	constructor(props: Readonly<PropTypes>) {
 		super(props);
+		this.node_modal = React.createRef();
 		this.state = {
 			isDragging: false,
 			isResizing: false,
@@ -243,9 +244,7 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 					onRequestRecover={onRequestRecover}
 					isMinimised={isMinimised}
 					isOpen={isOpen}
-					ref={(node) => {
-						this.node_modal = node;
-					}}
+					ref={this.node_modal}
 				>
 					{this.props.children}
 					<div
