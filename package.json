@@ -1,6 +1,6 @@
 {
   "name": "react-modal-resizable-draggable-overlay",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This is a modal that support resizalbe and draggable function",
   "repository": {
     "type": "git",

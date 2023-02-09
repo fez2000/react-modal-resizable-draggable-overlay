@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import './index.css';
-import Modal from './modal';
 interface PropTypes {
     top?: number;
     left?: number;
@@ -37,7 +36,7 @@ interface StateTypes {
     isResizing: boolean;
 }
 declare class FlexibleModal extends Component<PropTypes, StateTypes> {
-    node_modal?: Modal | null;
+    node_modal?: any | null;
     dragArea?: HTMLDivElement | null;
     dragArea2?: HTMLDivElement | null;
     dragArea3?: HTMLDivElement | null;

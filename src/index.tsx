@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component, } from 'react';
 import './index.css';
 import Resizer from './resize';
 import Modal from './modal';
@@ -43,7 +42,7 @@ interface StateTypes {
 }
 
 class FlexibleModal extends Component<PropTypes, StateTypes> {
-	node_modal?: Modal | null;
+	node_modal?: any  | null;
 	dragArea?: HTMLDivElement | null;
 	dragArea2?: HTMLDivElement | null;
 	dragArea3?: HTMLDivElement | null;
@@ -98,7 +97,7 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 		// only left mouse button
 		document.addEventListener('mousemove', this.onMouseMove);
 		if (e.button !== 0) return;
-		const pos = ReactDOM.findDOMNode(this.node_modal) as HTMLElement;
+		const pos = (this.node_modal.current) as HTMLElement;
 		if (pos) {
 			this.setState({
 				isDragging: true,
@@ -156,7 +155,7 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 
 	funcResizing(clientX: number, clientY: number) {
 		const { minWidth: mWidth, minHeight: mHeight, disableVerticalResize, disableHorizontalResize } = this.props;
-		let node = ReactDOM.findDOMNode(this.node_modal) as HTMLElement;
+		let node = (this.node_modal.current) as HTMLElement;
 		let minWidth = mWidth ? mWidth : 200;
 		let minHeight = mHeight ? mHeight : 100;
 		if (!disableHorizontalResize && node && clientX > node.offsetLeft + minWidth) {
