@@ -224,14 +224,7 @@ class FlexibleModal extends Component<PropTypes, StateTypes> {
 		return (
 			<div style={style||{}}>
 				{/*this mask is a must*/}
-				{isOpen &&
-					!isMinimised && (
-						<div
-						
-							onClick={onRequestMinimise ? onRequestMinimise : onRequestClose}
-							className="flexible-modal-mask"
-						/>
-					)}
+				
 				<Modal
 				    
 					className={className}

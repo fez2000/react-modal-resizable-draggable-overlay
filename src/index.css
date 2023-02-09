@@ -1,6 +1,6 @@
 .flexible-modal {
   position: absolute;
-  z-index: 1;
+  z-index: auto;
   border: 1px solid #ccc;
   background: white;
 }
