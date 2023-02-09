@@ -13,8 +13,7 @@ interface PropTypes {
     onFocus: () => void;
 }
 export default class Modal extends Component<PropTypes> {
-    node?: HTMLDivElement | null;
-    wrapper: any;
+    node?: any | null;
     constructor(props: any);
     render(): JSX.Element;
 }
